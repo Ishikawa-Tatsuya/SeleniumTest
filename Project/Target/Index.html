@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/handsontable/handsontable.full.min.js"></script>
+    <link href="Content/handsontable/handsontable.full.min.css" rel="stylesheet" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Target</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div id="handsontableA"></div>
+    <INPUT type="text" id="textboxA">
+    <input type="button"  id="buttonA" value="ボタンA">
+    <script>
+        $(function () {
+
+            var data = [
+              ["", "Ford", "Volvo", "Toyota", "Honda"],
+              ["2014", 10, 11, 12, 13],
+              ["2015", 20, 11, 14, 13],
+              ["2016", 30, 15, 12, 13]
+            ];
+
+            var container = document.getElementById('handsontableA');
+            var hot = new Handsontable(container, {
+                data: data,
+                minSpareRows: 1,
+                rowHeaders: true,
+                colHeaders: true,
+                contextMenu: true
+            });
+        });
+    </script>
+</body>
+</html>
